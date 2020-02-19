@@ -16,7 +16,8 @@ def FindMeonah(big,fil,result):
     
     for row in range(len(result)):
         for colm in range(len(result[0])):
-            stam = np.multiply(big[row:row+3,colm:colm+3],fil)
+            #stam = np.multiply(big[row:row+3,colm:colm+3],fil)
+            stam = big[row:row+3,colm:colm+3]*fil
             scalr = ConvertToScalarNumber(stam)
             result[row][colm] += scalr
     print(result)
